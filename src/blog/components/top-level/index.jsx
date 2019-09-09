@@ -5,6 +5,7 @@ export default class index extends Component {
     return (
       <div>
         <div>
+          <h1>顶级API</h1>
           <ul>
             <li> 1.渲染函数 ReactDOM.render(插入元素，目标元素)</li>
             <li>

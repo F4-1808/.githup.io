@@ -4,7 +4,11 @@ import MyLayout from './components/layout/'
 // 引入react基础部分组件
 import ReactBase from './components/ReactBase/'
 // 引入组件类型部分组件
-import ComponentType from './components/componentType/'
+import ComponentType from './components/top-level/'
+// 引入插槽组件组件
+import Slot from './components/slot/'
+// 引入class组件和无状态组件介绍 组件
+import ClassState from './components//class-Stateless/'
 export default class inde extends Component {
   constructor() {
     super()
@@ -37,6 +41,12 @@ export default class inde extends Component {
         break
       case 'ComponentType':
         Dom = <ComponentType />
+        break
+      case 'Slot':
+        Dom = <Slot />
+        break
+      case 'ClassState':
+        Dom = <ClassState />
         break
     }
     return (

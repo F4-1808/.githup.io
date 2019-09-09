@@ -8,8 +8,10 @@ const { Header, Sider, Content } = Layout
 
 // 定义侧边栏菜单数据
 const MenuData = [
-  { content: 'React概述', type: 'user', hash: 'reactBase' },
-  { content: '组件类型', type: 'video-camera', hash: 'ComponentType' }
+  { content: '顶级API', type: 'user', hash: 'reactBase' },
+  { content: '组件类型', type: 'video-camera', hash: 'ComponentType' },
+  { content: '插槽', type: 'video-camera', hash: 'Slot' },
+  { content: 'class和无状态组件', type: 'video-camera', hash: 'ClassState' }
 ]
 export default class Index extends Component {
   constructor() {
