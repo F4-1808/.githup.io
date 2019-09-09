@@ -1,34 +1,38 @@
 // 模板组件
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 // 引入布局组件
 // Layout 代表最外层   Menu代表导航  Icon代表图标
-import { Layout, Menu, Icon } from 'antd'
+import { Layout, Menu, Icon } from 'antd';
 
-const { Header, Sider, Content } = Layout
+const { Header, Sider, Content } = Layout;
 
 // 定义侧边栏菜单数据
 const MenuData = [
+  { content: 'React发展和起源', type: 'video-camera', hash: 'Reactdfzhqy' },
   { content: '顶级API', type: 'user', hash: 'reactBase' },
   { content: '组件类型', type: 'video-camera', hash: 'ComponentType' },
   { content: '插槽', type: 'video-camera', hash: 'Slot' },
-  { content: 'class和无状态组件', type: 'video-camera', hash: 'ClassState' }
-]
+  { content: 'class和无状态组件', type: 'video-camera', hash: 'ClassState' },
+  { content: '搭建和配置', type: 'video-camera', hash: 'Comwtym' },
+  { content: '渲染组件', type: 'video-camera', hash: 'Comwtym2' },
+  { content: '组件分类', type: 'video-camera', hash: 'Comzjfl' }
+];
 export default class Index extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       collapsed: false //控制是否显示侧边栏
-    }
+    };
   }
 
   // 切换导航栏显示和隐藏
   toggle = () => {
     this.setState({
       collapsed: !this.state.collapsed
-    })
-  }
+    });
+  };
   render(props) {
-    const { changehash } = this.props
+    const { changehash } = this.props;
     return (
       <Layout>
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
@@ -42,13 +46,13 @@ export default class Index extends Component {
                 <Menu.Item
                   key={index}
                   onClick={() => {
-                    changehash(item.hash)
+                    changehash(item.hash);
                   }}
                 >
                   <Icon type={item.type} />
                   <span>{item.content}</span>
                 </Menu.Item>
-              )
+              );
             })}
           </Menu>
         </Sider>
@@ -73,6 +77,6 @@ export default class Index extends Component {
           </Content>
         </Layout>
       </Layout>
-    )
+    );
   }
 }
